@@ -1,0 +1,208 @@
+#############
+#
+# See dcycleproject.org
+#
+# Authored by Albert Albala (@alberto56)
+#
+# This slideshow uses
+#
+#  * [Deck.js](http://imakewebthings.com/deck.js/) for the slideshow
+#  * GitHub and GitHub Pages for hosting
+#  * [Jekyll](http://jekyllrb.com) for converting yaml into HTML for deck.js
+#
+# See https://github.com/alberto56/presentation_docker_fr
+# See http://alberto56.github.io/presentation_docker_fr/
+# See http://www.drupalnorth.org/en/session/une-introduction-a-docker
+#
+#############
+
+- id: a19
+  title: Intro À Docker
+  desc: |
+    Albert Albala (@alberto56)
+
+    Dcycle, Fondation Linux, TP1 (STM.info), CGI (Fondation 24h Tremblant), Koumbit
+
+    Spécialités: Tests, Intégration continue, Deployment standardisé, Drupal
+
+    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
+
+    Blog: dcycleproject.org
+
+#############
+
+- id: a32
+  title: Introductions
+  desc: |
+    Pourquoi votre intérêt pour Docker?
+
+     * Développeurs?
+     * Gestionnaires de projet?
+     * Sysadmins?
+     * Environnements de dev rapides?
+     * Déploiement facile en prod
+     * Frustration avec Vagrant, machines virtuelles?
+     * Frustration avec Puppet, Chef, Ansible?
+
+#############
+
+- id: a39
+  title: Menu
+  desc: |
+
+     * Pourquoi le DevOps
+     * Machines virtuelles vs. conteneurs
+     * Idempotence vs. conteneurs non-persistents
+     * Utilisation agressive de la mémoire cache
+     * Les données
+     * Demos
+     * À considérer
+     * Questions
+
+#############
+
+- id: a56
+  title: Pourquoi le DevOps
+  desc: |
+
+    Au début... rien sous git:
+
+    <img src="./images/stack_nothing.png" />
+
+#############
+
+- id: a64
+  title: Pourquoi le DevOps
+  desc: |
+
+    Le code Drupal sous git:
+
+    <img src="./images/stack_drupal.png" />
+
+#############
+
+- id: a7220150626144522
+  title: Pourquoi le DevOps
+  desc: |
+
+    Features:
+
+    <img src="./images/stack_features.png" />
+
+#############
+
+- id: a80
+  title: Pourquoi le DevOps
+  desc: |
+
+    La promesse du DevOps:
+    <img src="./images/stack_promise.png" />
+
+#############
+
+- id: a88
+  title: Machines virtuelles vs. conteneurs
+  desc: |
+
+    <img src="./images/vms-containers.png" />
+
+    Source: docker.com
+
+#############
+
+- id: a10520150626150738
+  title: Idempotence vs. conteneurs non-persistents
+  desc: |
+
+    Les outils idempotents (Chef, Puppet) décrivent l'état désiré d'un système
+
+        package { 'php' :
+          ensure => '5.2' ,
+        }
+
+    Lors d'une mise à jour, l'outil modifie le système cible.
+
+    <img src="./images/idempotent.png" />
+
+#############
+
+- id: a10520150626150713
+  title: Idempotence vs. conteneurs non-persistents
+  desc: |
+
+    Avec Docker, le conteneur est remplacé, pas mis à jour.
+
+        RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
+
+    <img src="./images/non-persistent.png" />
+
+#############
+
+- id: a129
+  title: Utilisation agressive de la mémoire cache
+  desc: |
+
+    Temps requis pour créer un environnement:
+
+     * Vagrant + VM: 10-30 secondes pour monter une VM.
+     * Docker après le 1er build: < 1 seconde.
+     * Systèmes de "commit" à la git
+
+    Avantages de franchir le **seuil psychologique de l'instantanéité**:
+
+     * Repartir à neuf pour chaque test
+     * Système n'est jamais pollué
+     * On peut construire le conteneur quand on en a besoin (comme Pantheon)
+
+#############
+
+- id: a184
+  title: Démos
+  desc: |
+
+     * Développement d'un module Drupal
+     * Docker avec autre chose que Drupal
+     * Développement d'un site Drupal
+     * Déploiement en prod
+     * Mise à jour
+     * Intégration continue avec CircleCI
+
+#############
+
+- id: a21420150626141901
+  title: À considérer
+  desc: |
+
+     * Docker ne roule pas sur Mac ou Windows
+     * ..._mais_ vous pouvez facilement rouler CoreOS sur une VM
+     * CoreOS: OS minime avec Docker et Git, idéal pour rouler Docker
+     * Docker roule sous root == problème potential de sécurité
+     * ..._mais_ l'équipe de CoreOS développe Rocket, une alternative à Docker.
+
+#############
+
+- id: a22820150626141903
+  title: En conclusion...
+  desc: |
+    Avant Docker...
+
+    <img src="./images/stevedoers1.jpg" />
+    <img src="./images/stevedoers2.jpg" />
+
+#############
+
+- id: a20150626142349
+  title: En conclusion...
+  desc: |
+    Après Docker...
+
+    <img src="./images/containers.jpg" />
+
+#############
+
+- id: a22820150626141903
+  title: Questions
+  desc: |
+    Albert Albala (@alberto56)
+
+    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)

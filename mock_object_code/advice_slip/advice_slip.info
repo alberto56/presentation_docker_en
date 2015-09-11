@@ -1,0 +1,3 @@
+name = Advice Slip
+description = Demonstrating the use of a mock object
+core = 7.x

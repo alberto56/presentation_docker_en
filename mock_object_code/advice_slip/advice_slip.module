@@ -1,0 +1,67 @@
+<?php
+/**
+ * @file
+ * Module file for advice_slip.
+ */
+
+/**
+ * Implements hook_menu().
+ */
+function advice_slip_menu() {
+  $items['get-advice'] = array(
+    'page callback' => 'advice_slip_get',
+    'access callback' => TRUE,
+    'title' => 'Random Advice',
+  );
+  return $items;
+}
+
+/**
+ * Menu callback
+ */
+function advice_slip_get() {
+  if (variable_get('advice_slip_mock')) {
+    $provider = new MockAdviceSlipAPI();
+  }
+  else {
+    $provider = new RealAdviceSlipAPI();
+  }
+  return $provider->getAdvice();
+}
+
+abstract class AdviceSlipAPI {
+  function getAdvice() {
+    $response = $this->getResponse();
+    if (isset($response->data)) {
+      $decoded = drupal_json_decode($response->data);
+      if (isset($decoded['slip']['advice'])) {
+        return $decoded['slip']['advice'];
+      }
+    }
+    return t('Oops, an error occurred');
+  }
+  abstract function getResponse();
+}
+
+class RealAdviceSlipAPI extends AdviceSlipAPI {
+  function getResponse() {
+    return drupal_http_request('http://api.adviceslip.com/advice');
+  }
+}
+
+class MockAdviceSlipAPI extends AdviceSlipAPI {
+  function getResponse() {
+    $strings = array(
+      'First advice',
+      'Second advice',
+      'Third advice',
+    );
+
+    $call_num = variable_get('advice_slip_mock_call', 0)%count($strings);
+    $string = $strings[$call_num];
+    variable_set('advice_slip_mock_call', ++$call_num);
+    $r = new StdClass;
+    $r->data = '{"slip": {"advice":"' . $string . '","slip_id":"' . rand(10, 99) . '"}}';
+    return $r;
+  }
+}

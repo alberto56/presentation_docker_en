@@ -1,0 +1,43 @@
+deploy.sh usage
+=====
+
+Installation
+-----
+
+Please place the entire "dcycle" directory, which contains the deploy.sh script,
+at the root of your project.
+
+Call this script from within a CoreOS VM, which must contain Docker.
+
+Usage
+-----
+
+./dcycle/deploy.sh
+
+  When used without any arguments, prints this help.
+
+-p 1234
+
+  Deploys your project so that it is available on port 1234 of the host. If the port
+  is already allocated you will get the error message
+
+-e [dev|prod]
+
+  if -e is not set or not set to a valid value, we will assume "dev".
+
+  dev:  we will deploy a container for development. All persistent data, if any, will
+        be stored on the container, and hence will disappear when the container is
+        destroyed. Also, development tools will be added to the container.
+
+  prod: we will deploy a container for production. All persistent data, if any, will
+        be stored outside the container. You may be asked to specify more information
+        about where to store this information if it applies to your container. No
+        development tools will be added to your container, and security will be tighter.
+
+-n
+
+  if -n is not set or not set to a valid value, we will assume "normal".
+
+  This string will be appended to the container for easier management; for example tests
+  might append a specific name like 'test14822' so that they can easily delete those
+  containers when tearing down the test.

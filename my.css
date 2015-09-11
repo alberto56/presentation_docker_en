@@ -1,0 +1,17 @@
+.pass {
+  font-weight: bold;
+  color: green; 
+}
+.pass:before {
+  content: "√ ";
+}
+.fail {
+  font-weight: bold;
+  color: red; 
+}
+.fail:before {
+  content: "x ";
+}
+.comment {
+  display:none;
+}

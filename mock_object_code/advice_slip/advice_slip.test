@@ -1,0 +1,39 @@
+<?php
+/**
+ * @file
+ * Test case for testing integration with the advice slip API.
+ */
+class BlockExampleTestCase extends DrupalWebTestCase {
+  protected $web_user;
+
+  public static function getInfo() {
+    return array(
+      'name' => 'Advice Slip functionality',
+      'description' => 'Tests Advice Slip API using a mock object.',
+      'group' => 'Advice Slip',
+    );
+  }
+
+  /**
+   * Enable module. No need to create user.
+   */
+  function setUp() {
+    parent::setUp('advice_slip');
+  }
+
+  /**
+   * Make sure we are using a mock object, we don't want the test to fail
+   * if the API is down.
+   */
+  function testAdviceSlip() {
+    variable_set('advice_slip_mock', TRUE);
+
+    // Find the blocks in the settings page.
+    $this->drupalGet('get-advice');
+    $this->assertText('Random Advice');
+    $this->assertText('First advice');
+    $this->drupalGet('get-advice');
+    $this->assertText('Second advice');
+  }
+
+}

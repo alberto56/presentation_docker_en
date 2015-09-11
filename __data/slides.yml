@@ -1,0 +1,89 @@
+#############
+#
+# See dcycleproject.org
+#
+# Authored by Albert Albala (@alberto56)
+#
+# This slideshow uses
+#
+#  * [Deck.js](http://imakewebthings.com/deck.js/) for the slideshow
+#  * GitHub and GitHub Pages for hosting
+#  * [Jekyll](http://jekyllrb.com) for converting yaml into HTML for deck.js
+#
+# See https://github.com/alberto56/presentation_docker_fr
+# See http://alberto56.github.io/presentation_docker_fr/
+# See http://www.drupalnorth.org/en/session/une-introduction-a-docker
+#
+#############
+
+- id: intro-med
+  title: Intro À Docker
+  desc: |
+    Albert Albaladd (@alberto56)
+
+    TP1 (STM.info), CGI (Fondation 24h Tremblant), Fondation Linux, Koumbit
+
+    Spécialités: Tests, Intégration continue, Deployment standardisé, Drupal
+
+    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
+
+#############
+
+- id: qui
+  title: À qui s'adresse cette présentation ?
+  desc: |
+    Qui êtes-vous ?
+
+     * Votre rôle ?
+     * Votre expérience avec Docker, Vagrant, Puppet ?
+     * Ce que vous cherchez dans cette présentation ?
+
+#############
+
+- id: a
+  title: Tuyau No. 1 - Installez un serveur d'intégration continue.
+  desc: |
+    Un serveur d'intégration continue doit:
+
+     * Être visible à l'équipe
+     * Être toujours vert
+     * Être non-intrusif
+     * Donner de l'information d'affaires sur la qualité du code
+     * Guider le refactoring
+
+#############
+
+- id: b
+  title: Évolution de du développement Drupal: Git.
+  desc: |
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
+
+#############
+
+- id: c
+  title: Évolution de du développement Drupal: Features.
+  desc: |
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
+
+#############
+
+- id: d
+  title: Évolution de du développement Drupal: DevOps (Vagrant, Puppet, Chef, Ansible, Docker).
+  desc: |
+<svg></svg>
+<svg class="defs"><defs><marker id="regularArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker><marker id="highlightArrow" class="arrow" viewBox="0 0 6 6" refX="5" refY="3" markerWidth="6" markerHeight="6" orient="auto"><path d="M 2 1 L 5 3 L 2 5"></path></marker></defs></svg><svg width="600" height="600" id="active-svg" class="diagram"><rect x="60" y="90" class="regular" width="510" height="240"></rect><rect x="570" y="330" class="regular"></rect><rect x="90" y="120" class="regular" width="90" height="180"></rect><rect x="210" y="120" class="regular" width="90" height="180"></rect><rect x="330" y="120" class="regular" width="90" height="180"></rect><rect x="450" y="120" class="regular" width="90" height="180"></rect><rect x="499" y="210" class="regular"></rect><rect x="499" y="210" class="regular"></rect></svg>
+
+#############
+
+- id: questions
+  title: Questions?
+  desc: |
+    Merci!
+
+    Albert Albala
+    _@alberto56_
+
+
+#############
