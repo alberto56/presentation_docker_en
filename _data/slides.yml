@@ -10,103 +10,107 @@
 #  * GitHub and GitHub Pages for hosting
 #  * [Jekyll](http://jekyllrb.com) for converting yaml into HTML for deck.js
 #
-# See https://github.com/alberto56/presentation_docker_fr
-# See http://alberto56.github.io/presentation_docker_fr/
-# See http://www.drupalnorth.org/en/session/une-introduction-a-docker
+# See https://github.com/alberto56/presentation_docker_en
+# See http://alberto56.github.io/presentation_docker_en/
+# See http://2015.drupalcampmontreal.com/en/sessions/adios-mamp-so-long-virtual-machines-fast-and-furious-development-and-deployment-docker
 #
 #############
 
 - id: a19
-  title: Intro À Docker
+  title: Adios MAMP, so long Virtual Machines -- fast and furious development and deployment with Docker
   desc: |
     Albert Albala (@alberto56)
 
-    Dcycle, Fondation Linux, TP1 (STM.info), CGI (Fondation 24h Tremblant), Koumbit
+    Dcycle, Linux Foundation, TP1 (STM.info), CGI, Koumbit
 
-    Spécialités: Tests, Intégration continue, Deployment standardisé, Drupal
+    Specialized in: Automatic testing, Continuous integration, Standardized deployment, Drupal
 
-    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
+    This is an open slideshow. You can [fork or modify it at github.com/alberto56/presentation_docker_en](https://github.com/alberto56/presentation_docker_en/edit/gh-pages/_data/slides.yml)
 
     Blog: dcycleproject.org
 
 #############
 
-- id: a32
-  title: Introductions
-  desc: |
-    Pourquoi votre intérêt pour Docker?
-
-     * Développeurs?
-     * Gestionnaires de projet?
-     * Sysadmins?
-     * Environnements de dev rapides?
-     * Déploiement facile en prod
-     * Frustration avec Vagrant, machines virtuelles?
-     * Frustration avec Puppet, Chef, Ansible?
-
-#############
-
-- id: a39
-  title: Menu
-  desc: |
-
-     * Pourquoi le DevOps
-     * Machines virtuelles vs. conteneurs
-     * Idempotence vs. conteneurs non-persistents
-     * Utilisation agressive de la mémoire cache
-     * Les données
-     * Demos
-     * À considérer
-     * Questions
-
-#############
-
 - id: a56
-  title: Pourquoi le DevOps
+  title: In the beginning...
   desc: |
 
-    Au début... rien sous git:
+    Nothing under version control, everything is unique:
 
     <img src="./images/stack_nothing.png" />
 
 #############
 
-- id: a64
-  title: Pourquoi le DevOps
+- id: a44
+  title: Commercial shipping before 1960
   desc: |
 
-    Le code Drupal sous git:
+    <img src="./images/shipping_before_1960.png" />
+
+    Source: http://www.slideshare.net/dotCloud/docker-intro-november
+
+#############
+
+- id: a54
+  title: Commercial shipping before 1960
+  desc: |
+
+    <img src="./images/matrix_from_hell.png" />
+
+    Source: http://www.slideshare.net/dotCloud/docker-intro-november
+
+#############
+
+- id: a64
+  title: Moving toward modern version control...
+  desc: |
+
+    Drupal code under git:
 
     <img src="./images/stack_drupal.png" />
 
 #############
 
 - id: a7220150626144522
-  title: Pourquoi le DevOps
+  title: Moving toward modern version control...
   desc: |
 
-    Features:
+    Features and a site deployment module:
 
     <img src="./images/stack_features.png" />
 
 #############
 
 - id: a80
-  title: Pourquoi le DevOps
+  title: Everything under version control
   desc: |
 
-    La promesse du DevOps:
+    The promise of DevOps:
     <img src="./images/stack_promise.png" />
 
 #############
 
 - id: a88
-  title: Machines virtuelles vs. conteneurs
+  title: Virtual machines
+  desc: |
+
+    <img src="./images/ship_on_ship.jpg" />
+
+#############
+
+- id: a88
+  title: Shipping containers are more efficient than carrying ships on a ship
+  desc: |
+
+    <img src="./images/containers_more_efficient.png.png" />
+
+#############
+
+- id: a111
+  title: Virtual machines vs. containers
   desc: |
 
     <img src="./images/vms-containers.png" />
-
-    Source: docker.com
 
 #############
 
@@ -181,22 +185,39 @@
 
 #############
 
-- id: a22820150626141903
+- id: a22820150626141903a
   title: En conclusion...
   desc: |
     Avant Docker...
 
     <img src="./images/stevedoers1.jpg" />
+
+#############
+
+- id: a22820150626141903b
+  title: En conclusion...
+  desc: |
+    Before Docker...
+
     <img src="./images/stevedoers2.jpg" />
+
+#############
+
+- id: a22820150626141903c
+  title: En conclusion...
+  desc: |
+    Before Docker...
+
+    <img src="./images/stevedoers1.jpg" />
 
 #############
 
 - id: a20150626142349
   title: En conclusion...
   desc: |
-    Après Docker...
+    After Docker...
 
-    <img src="./images/containers.jpg" />
+    <img src="./images/ship_on_ship.jpg" />
 
 #############
 
@@ -205,4 +226,6 @@
   desc: |
     Albert Albala (@alberto56)
 
-    Cette présentation est ouverte. Vous pouvez la [cloner ou la modifier sur github.com/alberto56/presentation_docker_fr](https://github.com/alberto56/presentation_docker_fr/edit/gh-pages/_data/slides.yml)
+    This is an open slideshow. You can [fork or modify it at github.com/alberto56/presentation_docker_en](https://github.com/alberto56/presentation_docker_en/edit/gh-pages/_data/slides.yml)
+
+    Blog: dcycleproject.org
