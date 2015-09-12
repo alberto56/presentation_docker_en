@@ -102,7 +102,7 @@
   title: Shipping containers are more efficient than carrying ships on a ship
   desc: |
 
-    <img src="./images/containers_more_efficient.png.png" />
+    <img src="./images/containers_more_efficient.png" />
 
 #############
 
@@ -115,26 +115,24 @@
 #############
 
 - id: a10520150626150738
-  title: Idempotence vs. conteneurs non-persistents
+  title: Idempotence vs. non-persistent containers
   desc: |
 
-    Les outils idempotents (Chef, Puppet) décrivent l'état désiré d'un système
+    Idempotence (Chef, Puppet, Ansible) describes how a system _should_ be:
 
         package { 'php' :
           ensure => '5.2' ,
         }
-
-    Lors d'une mise à jour, l'outil modifie le système cible.
 
     <img src="./images/idempotent.png" />
 
 #############
 
 - id: a10520150626150713
-  title: Idempotence vs. conteneurs non-persistents
+  title: Idempotence vs. non-persistent containers
   desc: |
 
-    Avec Docker, le conteneur est remplacé, pas mis à jour.
+    Super-efficient Docker containers don't need to be fixed, they are rebuilt and replaced.
 
         RUN apt-get -y install php5 libapache2-mod-php5 php5-mcrypt
 
@@ -143,59 +141,59 @@
 #############
 
 - id: a129
-  title: Utilisation agressive de la mémoire cache
+  title: Agressive caching
   desc: |
 
-    Temps requis pour créer un environnement:
+    Resources required to build a system:
 
-     * Vagrant + VM: 10-30 secondes pour monter une VM.
-     * Docker après le 1er build: < 1 seconde.
-     * Systèmes de "commit" à la git
+     * Vagrant + VM: 10-30 seconds to build the VM.
+     * Docker after the first build: < 1 seconde.
+     * Docker "commits" are cached, so only what's changed is rebuilt.
 
-    Avantages de franchir le **seuil psychologique de l'instantanéité**:
+    Advantages of going under the **psychological threshold of instantaneousness**:
 
-     * Repartir à neuf pour chaque test
-     * Système n'est jamais pollué
-     * On peut construire le conteneur quand on en a besoin (comme Pantheon)
+     * Start from scratch with each test
+     * System is never "polluted"
+     * Build your container only when needed (like Pantheon)
 
 #############
 
 - id: a184
-  title: Démos
+  title: Demos
   desc: |
 
-     * Développement d'un module Drupal
-     * Docker avec autre chose que Drupal
-     * Développement d'un site Drupal
-     * Déploiement en prod
-     * Mise à jour
-     * Intégration continue avec CircleCI
+     * Drupal 8 module
+     * Docker with non-Drupal projects
+     * Drupal 8 website
+     * Deploy to production
+     * Update
+     * Continuous integration with CircleCI
 
 #############
 
 - id: a21420150626141901
-  title: À considérer
+  title: Caveats
   desc: |
 
-     * Docker ne roule pas sur Mac ou Windows
-     * ..._mais_ vous pouvez facilement rouler CoreOS sur une VM
-     * CoreOS: OS minime avec Docker et Git, idéal pour rouler Docker
-     * Docker roule sous root == problème potential de sécurité
-     * ..._mais_ l'équipe de CoreOS développe Rocket, une alternative à Docker.
+     * Docker does not work on Mac or Windows
+     * ..._but_ you can run Docker on a CoreOS VM
+     * CoreOS: super-small OS with Docker and Git
+     * Docker runs under root == potential security cringes
+     * ..._but_ the CoreOS team is working on Rocket, a more secure alternative to Docker.
 
 #############
 
 - id: a22820150626141903a
-  title: En conclusion...
+  title: In conclusion...
   desc: |
-    Avant Docker...
+    Before Docker...
 
     <img src="./images/stevedoers1.jpg" />
 
 #############
 
 - id: a22820150626141903b
-  title: En conclusion...
+  title: In conclusion...
   desc: |
     Before Docker...
 
@@ -204,20 +202,20 @@
 #############
 
 - id: a22820150626141903c
-  title: En conclusion...
+  title: In conclusion...
   desc: |
     Before Docker...
 
-    <img src="./images/stevedoers1.jpg" />
+    <img src="./images/ship_on_ship.jpg" />
 
 #############
 
 - id: a20150626142349
-  title: En conclusion...
+  title: In conclusion...
   desc: |
     After Docker...
 
-    <img src="./images/ship_on_ship.jpg" />
+    <img src="./images/containers.jpg" />
 
 #############
 
