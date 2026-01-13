@@ -2,8 +2,8 @@ backend:
   name: github
   repo: alberto56/presentation_docker_en
   branch: gh-pages
-  base_url: https://suresh-issue-82.dcycleproject.org
-  auth_endpoint: /auth/github/repo/694f514418f56cc3582664fb
+  base_url: https://app.staticauth.com
+  auth_endpoint: /auth/github/repo/696663c98a3239f2047175fc
 media_folder: static/uploads
 public_folder: /uploads
 collections:
